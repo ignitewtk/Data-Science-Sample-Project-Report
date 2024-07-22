@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div class="container1">
+<span> display flex </span>
+	<div class="content-ch"> center horizontally </div>
+	<div class="content-cv"> center vertically </div>
+	<div class="content-cb"> center both </div>
+</div>
+
+<div class="container2">
+<span> display flex: fix header and footer, expand body and fill the rest </span>
+	<div class="ct2-header"> header </div>
+    <div class="ct2-body"> body </div>
+    <div class="ct2-footer"> footer </div> 
+</div>
+
+<div class="container3">
+<span> display grid: fix header and footer, expand body and fill the rest </span>
+	<div class="ct3-header"> header </div>
+    <div class="ct3-body"> body </div>
+    <div class="ct3-footer"> footer </div> 
+   </div>
+
+<div class="container4">ppp</div>
+
+
+</body>
+
+
+
+</html>
+
+
+<style>
+
+.container1 {
+  background-color: #ffc5bd;
+  width: 700px;
+  min-height: 50px;
+  height: 200px;
+  display: block;
+  padding: 5px;
+}
+
+.content-ch {
+	background-color: #f9f9f9;
+    margin: 5px;
+    width: 350px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.content-cv {
+	background-color: #f9f9f9;
+    margin: 5px;
+    width: 350px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.content-cb {
+	background-color: #f9f9f9;
+    margin: 5px;
+    width: 350px;
+    height: 50px;
+    /* can only be flex or grid, others cannot*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container2 {
+  background-color: #ffffb2;
+  width: 700px;
+  min-height: 50px;
+  height: 200px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.ct2-header {
+	width: 350px;
+    height: 7dvh;
+    min-height: 30px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+.ct2-body {
+	width: 350px;
+    background-color: #f9f9;
+    flex-grow: 1;
+    text-align: center;
+}
+.ct2-footer{
+	width: 350px;
+    height: 7dvh;
+    min-height: 30px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+
+.container3 {
+  background-color: #d3ffd6;
+  width: 700px;
+  min-height: 50px;
+  height: 40dvh;
+  padding: 5px;
+  display: grid;
+  grid-template-rows: auto 1fr auto; 
+}
+
+.ct3-header {
+    background-color: #f9f9f9;
+    text-align: center;
+    grid-row: 1;
+    padding: 3dvh;
+}
+.ct3-body {
+    background-color: #f9f9dd;
+    text-align: center;
+    grid-row: 2;
+}
+.ct3-footer{
+    background-color: #f9f9ee;
+    text-align: center;
+    grid-row: 3;
+    padding: 3dvh;
+}
+
+
+.container4 {
+  background-color: grey;
+  width: 200px;
+  height: 50px;
+}
+</style>
